@@ -83,24 +83,9 @@ Modern game reverse engineering combines classical binary analysis (static disas
 
 ---
 
-## 📚 Documentation Index
+## 📚 Documentation
 
-All complete research guides and technical documentation are available in the [**`docs/`**](docs/) folder:
-
-- [**01. Introduction to AI Reverse Engineering**](docs/01_introduction.md) — Fundamentals of game reverse engineering with LLMs and agentic assistants.
-- [**02. Static Analysis & Decompilation**](docs/02_static_analysis_and_decompilation.md) — Decompilation workflows with Ghidra/IDA Pro, symbol recovery, and type restoration.
-- [**03. Dynamic Analysis & Memory Forensics**](docs/03_dynamic_analysis_and_memory.md) — Hooking, debugging with x64dbg/Cheat Engine, signature scanning, and vtables.
-- [**04. Binary File Format Reconstruction**](docs/04_file_format_reconstruction.md) — Step-by-step methodology to reverse engineer proprietary game formats and archives.
-- [**05. Bytecode & Scripting Engines**](docs/05_bytecode_and_scripting_engines.md) — Custom virtual machines, opcode dispatchers, and bytecode compilation.
-- [**06. AI Prompts & Ghidra Workflows**](docs/06_ai_prompts_and_ghidra_workflows.md) — Reusable AI prompts, MCP integrations, and headless Ghidra batch scripts.
-- [**07. Game Engine Preservation**](docs/07_game_engine_preservation.md) — Recreating source ports, modern 3D level editors, and preserving retro assets.
-- [**08. Case Studies: Project I.G.I.**](docs/08_case_studies_project_igi.md) — Deep-dive into Project I.G.I. engine internals, QVM scripting, and converters.
-- [**09. AI Rebuild Projects Showcase**](docs/09_documented_ai_reverse_engineering_projects.md) — Detailed case studies, articles, and videos for 8 documented AI game rebuilds.
-- [**10. MCP in Reverse Engineering**](docs/10_mcp_reverse_engineering_architecture.md) — Architecture of connecting AI agents directly to disassemblers/debuggers.
-- [**11. Ghidra MCP Setup & Workflows**](docs/11_ghidra_mcp_setup_and_workflows.md) — Full setup, tool definitions, headless bridging, and agentic workflows with Ghidra.
-- [**12. IDA Pro MCP Setup & Workflows**](docs/12_ida_pro_mcp_setup_and_workflows.md) — IDAPython MCP server setup, Hex-Rays decompiler API, and struct sync.
-- [**13. Radare2 & r2pipe MCP Workflows**](docs/13_radare2_r2pipe_mcp_workflows.md) — Headless r2pipe MCP server, CFG extraction, ESIL emulation, and binary diffing.
-- [**14. Universal AI Decompilation Prompts**](docs/14_universal_ai_decompilation_prompts.md) — Battle-tested prompt templates for 3D math, collision, ECS entity loops, and parsers.
+For complete research guides, reverse-engineering methodologies, MCP tool setups (Ghidra, IDA Pro, Radare2), and prompt templates, explore the [**`docs/`**](docs/) directory.
 
 ---
 
