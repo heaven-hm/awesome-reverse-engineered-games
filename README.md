@@ -19,16 +19,17 @@ Modern game reverse engineering combines classical binary analysis (static disas
 2. **Binary File Format Reconstruction**: Using heuristics and AI pattern matching to decode proprietary 3D models, textures, animations, archives, and level scripts.
 3. **Dynamic Memory & State Forensics**: Hooking game loops, locating entities, tracking vtables, and mapping gameplay states.
 4. **Bytecode & Virtual Machine Reversing**: Disassembling and interpreting proprietary game scripting engines (e.g. QVM/QSC in Project I.G.I.).
-5. **Game Engine Modernization**: Re-implementing legacy rendering, audio, and physics pipelines in modern C++ / Vulkan / OpenGL.
+5. **Game Engine Modernization**: Re-implementing legacy rendering, audio, and physics pipelines in modern C++ / C# / Vulkan / OpenGL.
 
 ---
 
 ## 🏆 Documented AI Reverse-Engineering Projects
 
-A showcase of documented reverse-engineering and engine rebuild projects powered by AI agents (Claude Code, OpenAI Codex, Ghidra MCPs):
+A showcase of documented reverse-engineering and engine rebuild projects powered by AI agents (Claude Code, OpenAI Codex, IDA Pro, Ghidra, Radare2 MCPs):
 
 | Project | Genre | Tools Used | Methodology & Highlights | Result | Time Taken |
 | :--- | :--- | :--- | :--- | :--- | :--- |
+| [**OpenIGI**](https://github.com/OpenIGI/OpenIGI) (2000) | Tactical Stealth FPS | Claude Code + Codex + IDA Pro + Ghidra + Radare2 MCP | Decompiled stripped x86 engine, QVM script VM, MEF meshes, terrain LOD & AI perception via MCP agents. | Complete open-source engine reimplementation (.NET / OpenGL / Vulkan). | **1 month** |
 | **Legends of Future Past** (1992) | Multiplayer Online MUD / RPG | Claude Code | Reverse-engineered proprietary scripts, GM manuals & 1996 recordings without source code. | Full Go engine + React + WebSocket + MongoDB rebuild (2,273 rooms, 1,990 items). | **One weekend** |
 | **SkyRoads** (1993 DOS) | Futuristic 3D Racer / Flyer | Codex | Analyzed raw binary EXE only, disassembled code, built custom software renderer in Rust. | Working native Rust port running on modern OS. | **~6 hours** |
 | **Disney Infinity 1.0** (2013) | Commercial Toys-to-Life | Claude Code (Opus) | Traced call graphs in symbol-stripped binary, found 13 character validation checks, generated binary patches. | Universal character unlock mod (unsolved for a decade). | **< 24 hours** |
@@ -55,7 +56,7 @@ The knowledge base is organized into focused Markdown guides:
 | [**06. AI Prompts & Ghidra Workflows**](docs/06_ai_prompts_and_ghidra_workflows.md) | Reusable AI prompts, MCP integrations, and automated headless Ghidra scripts. |
 | [**07. Game Engine Preservation**](docs/07_game_engine_preservation.md) | Recreating source ports, modern 3D level editors, and preserving retro game assets. |
 | [**08. Case Studies: Project I.G.I.**](docs/08_case_studies_project_igi.md) | Real-world deep-dives into Project I.G.I. engine internals, QVM scripting, and converters. |
-| [**09. AI Rebuild Projects Showcase**](docs/09_documented_ai_reverse_engineering_projects.md) | Catalog of famous real-world game rebuilds created with Claude Code, Codex & Ghidra. |
+| [**09. AI Rebuild Projects Showcase**](docs/09_documented_ai_reverse_engineering_projects.md) | Catalog of famous real-world game rebuilds created with Claude Code, Codex, IDA Pro & Ghidra. |
 
 ---
 
@@ -63,15 +64,16 @@ The knowledge base is organized into focused Markdown guides:
 
 - **Disassemblers & Decompilers**: Ghidra, IDA Pro, Binary Ninja, Radare2 / Cutter.
 - **Dynamic Debuggers**: x64dbg, Cheat Engine, ScyllaHide, Process Hacker, PCSX-Redux.
-- **AI & Automation**: Antigravity, Claude Code, OpenAI API, Ghidra MCP Server, Python scripts (`pefile`, `capstone`, `keystone`).
+- **AI & Automation**: Antigravity, Claude Code, OpenAI Codex, OpenAI API, Ghidra MCP Server, Radare2 MCP, Python scripts (`pefile`, `capstone`, `keystone`).
 - **File Format Analysis**: 010 Editor, ImHex, Kaitai Struct, Hex Fiend.
-- **Modern Dev**: C++20, Rust, Go, Python 3.12, Qt5/Qt6, OpenGL, Vulkan, CMake.
+- **Modern Dev**: C++20, C#, Rust, Go, Python 3.12, Qt5/Qt6, OpenGL, Vulkan, CMake.
 
 ---
 
 ## 🚀 Getting Started
 
 Browse any of the Markdown guides in the [`docs/`](docs/) directory to explore specific topics, or check out our companion projects:
+- [OpenIGI](https://github.com/OpenIGI/OpenIGI) - Full open-source engine reimplementation of Project I.G.I.
 - [project-igi-converter](https://github.com/heaven-hm/project-igi-converter) - Script compiler, decompiler, and multi-format asset conversion engine.
 - [project-igi-editor](https://github.com/heaven-hm/project-igi-editor) - 3D level viewport and modding suite.
 
