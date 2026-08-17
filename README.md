@@ -23,6 +23,24 @@ Modern game reverse engineering combines classical binary analysis (static disas
 
 ---
 
+## 🏆 Documented AI Reverse-Engineering Projects
+
+A showcase of documented reverse-engineering and engine rebuild projects powered by AI agents (Claude Code, OpenAI Codex, Ghidra MCPs):
+
+| Project | Genre | Tools Used | Methodology & Highlights | Result | Time Taken |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Legends of Future Past** (1992) | Multiplayer Online MUD / RPG | Claude Code | Reverse-engineered proprietary scripts, GM manuals & 1996 recordings without source code. | Full Go engine + React + WebSocket + MongoDB rebuild (2,273 rooms, 1,990 items). | **One weekend** |
+| **SkyRoads** (1993 DOS) | Futuristic 3D Racer / Flyer | Codex | Analyzed raw binary EXE only, disassembled code, built custom software renderer in Rust. | Working native Rust port running on modern OS. | **~6 hours** |
+| **Disney Infinity 1.0** (2013) | Commercial Toys-to-Life | Claude Code (Opus) | Traced call graphs in symbol-stripped binary, found 13 character validation checks, generated binary patches. | Universal character unlock mod (unsolved for a decade). | **< 24 hours** |
+| **Chromatron** (~2005) | Laser / Mirror Logic Puzzle | Claude Code + Cursor + Ghidra | Decompiled legacy WinXP / PowerPC binaries via GhidrAssistMCP to modern targets. | Native Apple Silicon + WebAssembly (Wasm) ports. | **Iterative** |
+| **Weltendämmerung** (1980s C64) | Turn-based Strategy | Claude Code (Opus 4.5) | Spec-driven reverse engineering from 6502 machine code to modern web stack. | 1:1 accurate web browser port. | **3 days** |
+| **Tomba!** (PS1) | 2.5D Action Platformer | Claude Code + Ghidra + PCSX-Redux | Created a MIPS-to-C++ static recompiler through an iterative agentic feedback loop. | Native Windows port with cutscenes, audio, combat & menus. | **~3 weeks** |
+| **Era Online** (1999) | MMORPG (Visual Basic 6) | Claude Code | Autonomous exploration of client binary and protocol; built extraction tools and modern server. | Full resurrection of the classic 1999 MMORPG. | **Short** |
+
+*For complete in-depth case studies on each project, read [09. Documented AI Reverse-Engineering & Rebuild Projects](docs/09_documented_ai_reverse_engineering_projects.md).*
+
+---
+
 ## 📚 Documentation Index
 
 The knowledge base is organized into focused Markdown guides:
@@ -37,16 +55,17 @@ The knowledge base is organized into focused Markdown guides:
 | [**06. AI Prompts & Ghidra Workflows**](docs/06_ai_prompts_and_ghidra_workflows.md) | Reusable AI prompts, MCP integrations, and automated headless Ghidra scripts. |
 | [**07. Game Engine Preservation**](docs/07_game_engine_preservation.md) | Recreating source ports, modern 3D level editors, and preserving retro game assets. |
 | [**08. Case Studies: Project I.G.I.**](docs/08_case_studies_project_igi.md) | Real-world deep-dives into Project I.G.I. engine internals, QVM scripting, and converters. |
+| [**09. AI Rebuild Projects Showcase**](docs/09_documented_ai_reverse_engineering_projects.md) | Catalog of famous real-world game rebuilds created with Claude Code, Codex & Ghidra. |
 
 ---
 
 ## 🛠️ Tooling & Tech Stack
 
 - **Disassemblers & Decompilers**: Ghidra, IDA Pro, Binary Ninja, Radare2 / Cutter.
-- **Dynamic Debuggers**: x64dbg, Cheat Engine, ScyllaHide, Process Hacker.
+- **Dynamic Debuggers**: x64dbg, Cheat Engine, ScyllaHide, Process Hacker, PCSX-Redux.
 - **AI & Automation**: Antigravity, Claude Code, OpenAI API, Ghidra MCP Server, Python scripts (`pefile`, `capstone`, `keystone`).
 - **File Format Analysis**: 010 Editor, ImHex, Kaitai Struct, Hex Fiend.
-- **Modern Dev**: C++20, Python 3.12, Qt5/Qt6, OpenGL, Vulkan, CMake.
+- **Modern Dev**: C++20, Rust, Go, Python 3.12, Qt5/Qt6, OpenGL, Vulkan, CMake.
 
 ---
 
