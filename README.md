@@ -1,17 +1,18 @@
-# AI Game Reverse Engineering & Research 🎮🧠
+# Awesome AI Game Reverse Engineering 🎮🧠
 
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![GitHub heaven-hm](https://img.shields.io/badge/GitHub-heaven--hm-blue?logo=github)](https://github.com/heaven-hm)
 [![Author IGI Proz](https://img.shields.io/badge/Author-IGI%20Proz-green)](mailto:igiproz.hm@gmail.com)
 [![Status Documentation](https://img.shields.io/badge/Docs-Markdown%20Knowledge%20Base-orange)](docs/)
 
-A curated open-source research repository, methodology guide, and knowledge base dedicated to **AI-assisted Video Game Reverse Engineering**, decompilation workflows, binary file format reconstruction, memory forensics, and classic game engine preservation.
+A curated list and comprehensive guide of **awesome reverse-engineering, decompilation, and engine rebuild projects** powered by AI models and agentic tools (Claude Code, OpenAI Codex, IDA Pro, Ghidra, Radare2 MCPs, and custom emulators).
 
 ---
 
 ## 📖 Overview
 
-Modern game reverse engineering combines classical binary analysis (static disassembly, dynamic debugging, memory hooking) with modern AI agentic workflows and Large Language Models (LLMs). This repository serves as a centralized collection of documentation and research notes covering:
+Modern game reverse engineering combines classical binary analysis (static disassembly, dynamic debugging, memory hooking) with modern AI agentic workflows and Large Language Models (LLMs). This repository serves as a centralized collection of documentation, case studies, and research notes covering:
 
 1. **AI-Augmented Decompilation**: Prompt engineering, context injection, and structural recovery from raw Ghidra/IDA/Radare2 pseudocode.
 2. **MCP (Model Context Protocol) Integration**: Connecting AI agents directly to **Ghidra**, **IDA Pro**, and **Radare2** for real-time querying, symbol renaming, and type propagation.
@@ -33,7 +34,7 @@ Modern game reverse engineering combines classical binary analysis (static disas
 | **SkyRoads** (1993 DOS) | Futuristic 3D Racer / Flyer | Codex | Analyzed raw binary EXE only, disassembled code, built custom software renderer in Rust. | Working native Rust port running on modern OS. | **~6 hours** |
 | **Disney Infinity 1.0** (2013) | Commercial Toys-to-Life | Claude Code (Opus) | Traced call graphs in symbol-stripped binary, found 13 character validation checks, generated binary patches. | Universal character unlock mod (unsolved for a decade). | **< 24 hours** |
 | **Chromatron** (~2005) | Laser / Mirror Logic Puzzle | Claude Code + Cursor + Ghidra | Decompiled legacy WinXP / PowerPC binaries via GhidrAssistMCP to modern targets. | Native Apple Silicon + WebAssembly (Wasm) ports. | **Iterative** |
-| [**Weltendämmerung**](https://github.com/adolfintel/weltendaemmerung) (1980s) | Turn-based Strategy | Claude Code (Opus 4.5) | Spec-driven reverse engineering from 6502 machine code to modern web stack. | 1:1 accurate web browser port. | **3 days** |
+| [**Weltendämmerung**](https://github.com/adolfintel/weltendaemmerung) (1980s C64) | Turn-based Strategy | Claude Code (Opus 4.5) | Spec-driven reverse engineering from 6502 machine code to modern web stack. | 1:1 accurate web browser port. | **3 days** |
 | **Tomba!** (PS1) | 2.5D Action Platformer | Claude Code + Ghidra + PCSX-Redux | Created a MIPS-to-C++ static recompiler through an iterative agentic feedback loop. | Native Windows port with cutscenes, audio, combat & menus. | **~3 weeks** |
 | [**Era Online**](https://era-online-forever.com) (1999) | MMORPG (Visual Basic 6) | Claude Code | Autonomous exploration of client binary and protocol; built extraction tools and modern server. | Full resurrection of the classic 1999 MMORPG. | **Short** |
 
