@@ -1,0 +1,26 @@
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+*~
+.idea/
+.vscode/
+
+# Binary and Build Artifacts
+*.exe
+*.dll
+*.so
+*.dylib
+*.o
+*.obj
+*.pdb
+*.idb
+*.i64
+*.gpr
+*.rep/
+
+# Python Cache
+__pycache__/
+*.pyc
+.pytest_cache/
