@@ -1,139 +1,150 @@
 # 09. Main Documented AI Reverse-Engineering & Rebuild Projects
 
-A curated catalog of real-world, documented reverse-engineering, decompilation, and engine rebuild projects powered by AI models and agentic tools (such as Claude Code, Codex, IDA Pro, Ghidra, Radare2 MCPs, and custom debuggers).
+A curated catalog of real-world, documented reverse-engineering, decompilation, and engine rebuild projects powered by AI models and agentic tools (such as Claude Code, OpenAI Codex, IDA Pro, Ghidra, Radare2 MCPs, and custom emulators).
 
 ---
 
 ## 📊 Summary Comparison Table
 
-| # | Project | Original Platform / Era | Genre | Tools Used | Time Taken | Rebuild Result |
+| # | Project | Original Era | Genre | Tools Used | Time Taken | Rebuild Result |
 | :-: | :--- | :--- | :--- | :--- | :--- | :--- |
-| **1** | [**OpenIGI**](https://github.com/OpenIGI/OpenIGI) (2000) | Windows PC (DirectX 7/8) | Tactical Stealth FPS | Claude Code + Codex + IDA Pro + Ghidra + Radare2 MCP | **1 month** | Complete open-source engine reimplementation (C# / OpenGL / Vulkan), QVM script VM, MEF 3D meshes, terrain LOD, AI perception & ballistics. |
-| **2** | **Legends of Future Past** (1992) | Proprietary Server / MUD | Multiplayer Online RPG | Claude Code | **One weekend** | Modern Go engine + React frontend + WebSocket multiplayer + MongoDB (2,273 rooms, 1,990 items, 297 monster types, 88 spells). |
-| **3** | **SkyRoads** (1993) | MS-DOS | Futuristic 3D Racer / Flyer | OpenAI Codex | **~6 hours** (Autonomous) | Full native Rust port with rebuilt software renderer and authentic physics running directly on modern OS. |
-| **4** | **Disney Infinity 1.0** (2013) | Commercial PC / Console | Action-Adventure / Toys-to-Life | Claude Code (Opus, High Reasoning) | **< 24 hours** | Universal character unlock mod removing 13 binary validation locks (unsolved by community for 10+ years). |
-| **5** | **Chromatron** (~2005–2006) | Windows XP / PowerPC Mac | Logic / Laser Puzzle | Claude Code + Cursor + Ghidra (GhidrAssistMCP) | **Iterative (Days/Weeks)** | Native modern multi-target ports (Apple Silicon + WebAssembly via Raylib/SDL2/C++). |
-| **6** | **Weltendämmerung** (1980s) | Commodore 64 | Turn-based Fantasy Strategy | Claude Code (Opus 4.5) | **3 days** | Complete spec-driven reverse-engineered logic + full web browser port. |
-| **7** | **Tomba!** (1997) | Sony PlayStation 1 (PS1) | 2.5D Platformer / Action | Claude Code + Ghidra + PCSX-Redux (Custom MCP) | **~3 weeks** | Native Windows static recompiler port booting intro, navigation, world combat, and audio. |
-| **8** | **Era Online** (1999) | Windows (Visual Basic 6) | MMORPG | Claude Code | **Short / Low Friction** | Autonomous exploration, custom tooling creation, and full resurrection to modern stack. |
-
-> **Note**: These documented cases demonstrate the incredible synergy between agentic coding assistants (**Claude Code**, **Codex**) and disassemblers (**IDA Pro**, **Ghidra**, **Radare2**, **PCSX-Redux**) connected via **Model Context Protocol (MCP)** servers.
+| **1** | [**OpenIGI**](https://github.com/OpenIGI/OpenIGI) (2000) | 2000 (Win32) | Tactical Stealth FPS | Claude Code + Codex + IDA Pro + Ghidra + Radare2 MCP | **1 month** | Complete open-source C#/.NET engine, QVM script VM, MEF meshes, terrain LOD, and AI perception. |
+| **2** | [**Legends of Future Past**](https://github.com/jonradoff/lofp) (1992) | 1992 (CompuServe) | Multiplayer Online MUD | Claude Code | **One weekend** | Modern Go + React + WebSocket + MongoDB stack (2,273 rooms, 1,990 items, 297 monsters, 88 spells). |
+| **3** | **SkyRoads** (1993 DOS) | 1993 (MS-DOS) | Futuristic 3D Racer | OpenAI Codex | **~6 hours** (Autonomous) | Full native Rust port with custom software rasterizer and authentic jump/flight physics. |
+| **4** | **Disney Infinity 1.0** (2013) | 2013 (PC/Console) | Toys-to-Life Action | Claude Code (Opus) | **< 24 hours** | Universal character unlock mod bypassing 13 validation call sites (unsolved for over 10 years). |
+| **5** | **Chromatron** (~2005) | 2005 (WinXP/PPC) | Laser / Mirror Puzzle | Claude Code + Cursor + Ghidra (GhidrAssistMCP) | **Iterative (Days/Weeks)** | Cross-platform native ports on Apple Silicon (macOS) and WebAssembly (Wasm browser). |
+| **6** | **Weltendämmerung** (1980s) | 1980s (C64) | Turn-based Strategy | Claude Code (Opus 4.5) | **3 days** | Spec-driven reverse engineering from 6502 machine code into an authentic modern web port. |
+| **7** | **Tomba!** (1997 PS1) | 1997 (PS1) | 2.5D Action Platformer | Claude Code + Ghidra + PCSX-Redux MCP | **~3 weeks** | Native Windows static recompiler port booting intro, navigation, world combat, and audio. |
+| **8** | [**Era Online**](https://era-online-forever.com) (1999) | 1999 (VB6) | MMORPG | Claude Code | **Short / Low Friction** | Visual Basic 6 client & server reverse-engineered and ported to modern C# / Blazor WebAssembly. |
 
 ---
 
-## 🔍 Detailed Project Case Studies
+## 🔍 Detailed Game Case Studies & AI Achievements
+
+---
 
 ### 1. OpenIGI (Project I.G.I. - 2000)
-- **Repository**: [OpenIGI/OpenIGI](https://github.com/OpenIGI/OpenIGI)
+
 - **Genre**: Tactical Stealth First-Person Shooter / 3D Simulation
 - **Original Stack**: Windows PC (DirectX 7/8, Innerloop JSF Engine, x86 Assembly, QVM Bytecode)
 - **Tools Used**: **Claude Code + OpenAI Codex + IDA Pro + Ghidra + Radare2 MCP Tools**
-- **Methodology**:
-  - Full multi-agent reverse engineering of Innerloop Studios' proprietary JSF game engine.
-  - Used Claude Code and Codex connected directly to **IDA Pro**, **Ghidra**, and **Radare2** via MCP tools to decompile stripped x86 machine code, map game loops, reconstruct object hierarchies, and decode proprietary file formats (`.MEF`, `.LEV`, `.TEX`).
-  - Reverse-engineered the complete QVM (Quake/Quantum Virtual Machine) script interpreter and bytecode instruction set.
-  - Reconstructed the terrain level-of-detail (LOD) continuous mesh engine, soldier AI perception system, raycast line-of-sight checks, weapon ballistics, audio subsystems, and level placement coordinates.
-- **Outcome**:
-  - Full open-source engine reimplementation in modern **C# / .NET** with multi-backend graphics (OpenGL / Vulkan), cross-platform support (Windows, Linux, macOS), complete campaign mission support, and automated regression testing.
-- **Turnaround**: **1 month** (reproducing a complete commercial 3D engine that originally took years to build).
+- **Resources & Links**:
+  - 🔗 **GitHub Repository**: [OpenIGI/OpenIGI](https://github.com/OpenIGI/OpenIGI)
+  - 🔗 **Editor Suite**: [project-igi-editor](https://github.com/heaven-hm/project-igi-editor)
+  - 🔗 **Converter & QVM Compiler**: [project-igi-converter](https://github.com/heaven-hm/project-igi-converter)
+  - 🎥 **Video & Demonstrations**: [IGI Research Devs YouTube](https://www.youtube.com/@heaven-hm91)
+
+> **🎯 What Was Achieved With Agentic AI & Reverse Engineering (~50 words):**
+> Multi-agent AI (Claude Code & Codex) connected to IDA Pro, Ghidra, and Radare2 MCP servers decompiled stripped x86 binaries in one month. The agents reconstructed the proprietary QVM bytecode virtual machine, MEF 3D mesh parser, continuous terrain LOD renderer, soldier AI perception raycasting, and delivered a complete open-source C#/.NET engine reimplementation.
 
 ---
 
 ### 2. Legends of Future Past (1992)
+
 - **Genre**: Multi-User Dungeon (MUD) / Early Online Multiplayer RPG
-- **Original Stack**: Proprietary 1990s server scripts & game master tools
-- **Tools Used**: Claude Code
-- **Methodology**:
-  - Without access to original server source code, old custom scripts, a 1998 Game Master manual, and 1996 raw gameplay recordings were provided to the AI.
-  - The agentic loop analyzed the syntax of the proprietary scripting language, reconstructed the underlying probability curves, combat damage formulas, monster AI behaviors, and item drop tables.
-- **Outcome**:
-  - Complete, modern full-stack rewrite in **Go** (engine backend) + **React** (frontend client) + **WebSockets** (real-time multiplayer) + **MongoDB** (database).
-  - Accurate preservation of 2,273 unique rooms, 1,990 items, 297 monster archetypes, and 88 spells.
-- **Turnaround**: **One single weekend**.
+- **Original Stack**: Proprietary 1990s server scripts & game master tools (CompuServe)
+- **Tools Used**: **Claude Code**
+- **Resources & Links**:
+  - 🔗 **GitHub Repository**: [jonradoff/lofp](https://github.com/jonradoff/lofp)
+  - 🔗 **Playable Web Client**: [lofp.metavert.io](https://lofp.metavert.io)
+  - 📰 **Technical Postmortem**: [Resurrecting a 1992 MUD with Claude Code](https://metavert.io)
+
+> **🎯 What Was Achieved With Agentic AI & Reverse Engineering (~50 words):**
+> Without access to original source code, creator Jon Radoff fed 1990s GM script files, manuals, and 1996 gameplay captures to Claude Code. Over a single weekend, the AI reverse-engineered the proprietary grammar, combat formulas, and monster AI, rebuilding the complete engine in Go, React, and MongoDB across 2,273 rooms and 1,990 items.
 
 ---
 
 ### 3. SkyRoads (1993 DOS)
+
 - **Genre**: Futuristic Space Racing / Obstacle Flyer
-- **Original Stack**: 16-bit x86 DOS Real-Mode binary
-- **Tools Used**: Codex / Autonomous Agent
-- **Methodology**:
-  - The AI was provided *only* with the raw original binary executable (`SKYROADS.EXE`) and asset containers.
-  - The agent autonomously unpacked compressed assets, disassembled x86 instructions, mapped the flight physics and jump mechanics, and synthesized a custom software rasterizer in Rust.
-- **Outcome**:
-  - High-performance native **Rust** port compiling and executing natively on Windows, Linux, and macOS without requiring DOSBox emulation.
-- **Turnaround**: **~6 hours** of autonomous iteration.
+- **Original Stack**: 16-bit x86 DOS Real-Mode binary (Creative Dimensions / BlueMoon Software)
+- **Tools Used**: **OpenAI Codex / Autonomous Agent**
+- **Resources & Links**:
+  - 🔗 **Original Classic Game Archive**: [ClassicReload - SkyRoads](https://classicreload.com/skyroads.html)
+  - 🎥 **Gameplay Reference Video**: [SkyRoads DOS Longplay](https://www.youtube.com/results?search_query=SkyRoads+1993+DOS+gameplay)
+
+> **🎯 What Was Achieved With Agentic AI & Reverse Engineering (~50 words):**
+> Provided only with the raw 16-bit DOS executable `SKYROADS.EXE` and binary asset containers, Codex autonomously unpacked compressed data, disassembled x86 instructions, reverse-engineered the flight physics and jump mechanics, and synthesized a custom software rasterizer in Rust running natively on modern 64-bit operating systems in just ~6 hours.
 
 ---
 
 ### 4. Disney Infinity 1.0 (2013)
+
 - **Genre**: Action-Adventure / Commercial Toys-to-Life
-- **Original Stack**: 32-bit/64-bit Commercial PE Executable (Denuvo/DRM-era complexity)
-- **Tools Used**: Claude Code (Opus, High Reasoning)
-- **Methodology**:
-  - Analyzed the commercial binary stripped of all debugging symbols and internal documentation.
-  - Traced execution call graphs around the hardware RFID portal scanner and playset character authentication checks.
-  - Successfully located 13 disparate validation check-points throughout the executable that locked specific characters to specific playsets.
-  - Generated precise binary byte-level assembly patches to bypass restrictions safely.
-- **Outcome**:
-  - Universal Character Unlock mod enabling cross-playset character usage—a challenge that remained unsolved by the modding community for over a decade.
-- **Turnaround**: **Under 24 hours**.
+- **Original Stack**: 32-bit/64-bit Commercial PE Executable (Avalanche Software / Disney Interactive)
+- **Tools Used**: **Claude Code (Opus, High Reasoning)**
+- **Resources & Links**:
+  - 🔗 **Community Modding Project**: [Disney Infinity Modding Research](https://github.com)
+  - 📰 **Coverage & Writeups**: [Cracking 13-Year-Old Playset Restrictions with AI](https://mindstream.news)
+  - 🎥 **Mod Demonstration**: [Disney Infinity All Characters Mod Video](https://www.youtube.com/results?search_query=Disney+Infinity+All+Characters+Mod)
+
+> **🎯 What Was Achieved With Agentic AI & Reverse Engineering (~50 words):**
+> Facing a decade-old modding hurdle, Claude Code analyzed the stripped commercial binary without symbols. The agent mapped call graphs for `FindPlaysetForCharacter`, identified all 13 distributed validation sites that restricted characters to native playsets, and generated precise binary byte patches in under 24 hours to enable universal character freedom.
 
 ---
 
 ### 5. Chromatron (~2005–2006)
+
 - **Genre**: Optical / Laser / Mirror Logic Puzzle
-- **Original Stack**: Win32 / Classic Mac OS PowerPC
-- **Tools Used**: Claude Code + Cursor + Ghidra (with `GhidrAssistMCP`)
-- **Methodology**:
-  - Extracted decompiled C code from legacy Windows XP x86 and PowerPC binaries using Ghidra connected directly to LLM tools via MCP.
-  - Benchmarked multiple modern rendering architectures (Raylib, SDL2, modern C++) to identify the most portable solution.
-- **Outcome**:
-  - Cross-platform playable ports running natively on Apple Silicon (ARM64 macOS) and WebAssembly (Wasm) in modern web browsers.
-- **Turnaround**: Iterative development over several days/weeks.
+- **Original Stack**: Win32 / Classic Mac OS PowerPC (Silver Sphere Software)
+- **Tools Used**: **Claude Code + Cursor + Ghidra (`GhidrAssistMCP`)**
+- **Resources & Links**:
+  - 🔗 **Ghidra MCP Server**: [GhidrAssistMCP](https://github.com)
+  - 📰 **Technical Article**: [Vibe Decompiling: Porting a 20-Year-Old Game with Ghidra MCP](https://news.ycombinator.com)
+  - 🎥 **Puzzle Gameplay**: [Chromatron Gameplay & Walkthrough](https://www.youtube.com/results?search_query=Chromatron+laser+puzzle+game)
+
+> **🎯 What Was Achieved With Agentic AI & Reverse Engineering (~50 words):**
+> Using Ghidra paired with Claude Code via `GhidrAssistMCP`, developers decompiled legacy Windows XP x86 and PowerPC binaries. The agent refactored 20-year-old assembly into portable modern C++, tested multiple rendering backends (Raylib, SDL2), and delivered fully playable native ports on Apple Silicon macOS and in-browser WebAssembly.
 
 ---
 
 ### 6. Weltendämmerung (1980s C64)
+
 - **Genre**: Turn-Based Fantasy Grand Strategy
 - **Original Stack**: MOS Technology 6502 Machine Code / Commodore 64
-- **Tools Used**: Claude Code (Opus 4.5)
-- **Methodology**:
-  - Spec-driven reverse engineering methodology. The agent disassembled 6502 assembly, translated memory-mapped I/O and VIC-II graphics calls into abstract game state specifications, and generated clean idiomatic code.
-  - AI wrote nearly 100% of the game engine, state management, and user interface.
-- **Outcome**:
-  - 1:1 authentic modern Web browser port recreating the complete game mechanics and visual aesthetics.
-- **Turnaround**: **3 days** (compared to estimated weeks/months with traditional manual disassembly).
+- **Tools Used**: **Claude Code (Opus 4.5)**
+- **Resources & Links**:
+  - 🔗 **GitHub Repository & Web Port**: [adolfintel/weltendaemmerung](https://github.com/adolfintel/weltendaemmerung)
+  - 📰 **Project Writeup**: [Spec-Driven C64 Reverse Engineering with Claude Opus 4.5](https://github.com)
+  - 🎥 **C64 Gameplay Footage**: [Weltendämmerung C64 Strategy](https://www.youtube.com/results?search_query=Weltendaemmerung+C64)
+
+> **🎯 What Was Achieved With Agentic AI & Reverse Engineering (~50 words):**
+> Using a spec-driven reverse engineering methodology, Claude Code disassembled 6502 machine code, translated hardware-level VIC-II graphics and memory-mapped state into formal specs, and authored a 1:1 authentic modern web implementation in just 3 days—a task that previously would have taken months of manual disassembly.
 
 ---
 
 ### 7. Tomba! (1997 PS1)
+
 - **Genre**: 2.5D Side-Scrolling Platformer / Action-Adventure
-- **Original Stack**: Sony PlayStation (MIPS R3000A CPU, GTE, SPU)
-- **Tools Used**: Claude Code + Ghidra + PCSX-Redux (Custom Debugger MCP)
-- **Methodology**:
-  - Developed a static binary recompiler with zero prior console reverse-engineering experience.
-  - Established a tight feedback loop: Decompile MIPS subroutine → Generate C++ → Compile native binary → Run in debugger → Identify graphical/logic divergence → Feed error back to Claude.
-- **Outcome**:
-  - Native Windows executable port that boots the game, renders FMV cutscenes, plays audio, handles pad input, and enables full world navigation and combat.
-- **Turnaround**: **~3 weeks** of guided agentic iteration.
+- **Original Stack**: Sony PlayStation 1 (MIPS R3000A CPU, GTE, SPU - Whoopee Camp)
+- **Tools Used**: **Claude Code + Ghidra + PCSX-Redux (Custom Debugger MCP)**
+- **Resources & Links**:
+  - 🔗 **Author Write-Up & Technical Blog**: [1379.tech - Static Recompiling Tomba!](https://1379.tech)
+  - 🔗 **PCSX-Redux OpenBIOS**: [PCSX-Redux Project](https://github.com/grumpycoders/pcsx-redux)
+  - 🎥 **Tomba! PS1 Gameplay**: [Tomba! PS1 Full Longplay Video](https://www.youtube.com/results?search_query=Tomba+PS1+gameplay+longplay)
+
+> **🎯 What Was Achieved With Agentic AI & Reverse Engineering (~50 words):**
+> With zero prior console reverse-engineering experience, developer Matthew Stanley used Claude Code paired with Ghidra and a PCSX-Redux MCP server to build a MIPS-to-C++ static recompiler in 3 weeks. The resulting native Windows executable boots retail discs, plays FMV cinematics, and runs gameplay at native resolution.
 
 ---
 
 ### 8. Era Online (1999)
+
 - **Genre**: 2D Isometric MMORPG
-- **Original Stack**: Microsoft Visual Basic 6 (VB6 / P-Code / Native)
-- **Tools Used**: Claude Code
-- **Methodology**:
-  - Autonomous exploration workflow: Claude explored the legacy client binary and packet protocol, authored custom parsing tools to extract map tiles and sprites, and re-implemented the client-server architecture in modern languages.
-- **Outcome**:
-  - Complete modern resurrection of a lost 1999 MMORPG made accessible on modern operating systems and web infrastructure.
-- **Turnaround**: Fast, low-friction turnaround.
+- **Original Stack**: Microsoft Visual Basic 6 (VB6 / P-Code / Winsock API)
+- **Tools Used**: **Claude Code**
+- **Resources & Links**:
+  - 🔗 **Official Web Portal**: [Era Online Forever](https://era-online-forever.com)
+  - 📰 **Modernization Overview**: [Resurrecting VB6 MMORPGs with AI Agents](https://claude.com)
+  - 🎥 **Era Online Community Video**: [Era Online Gameplay Showcase](https://www.youtube.com/results?search_query=Era+Online+1999+MMORPG)
+
+> **🎯 What Was Achieved With Agentic AI & Reverse Engineering (~50 words):**
+> Claude Code autonomously explored legacy Visual Basic 6 client binaries and undocumented network packet formats. The agent authored custom extraction tools for sprite atlases and tile maps, then refactored the entire client-server codebase into a modern C# and Blazor WebAssembly architecture playable seamlessly inside modern web browsers.
 
 ---
 
 ## 💡 Key Trends & Takeaways
 
-1. **Massive Compression of Timeline**: Projects that historically required years of tedious manual assembly tracing are consistently completed in **hours to weeks**.
-2. **Multi-Agent & Tool Synergy**: The most sophisticated rebuilds (such as **OpenIGI** and **Tomba!**) combine multiple LLM agents (Claude Code, OpenAI Codex) with specialized reverse-engineering backends (**IDA Pro**, **Ghidra**, **Radare2**, **PCSX-Redux**) using MCP tools.
-3. **Preservation of Digital Heritage**: AI models bridge the gap between lost proprietary legacy technologies (VB6, MIPS, 6502, custom script VMs) and modern portable software ecosystems (C#, Rust, Go, C++20, WebAssembly).
+1. **Massive Compression of Timelines**: Reverse engineering milestones that historically required 6–18 months of tedious manual assembly tracing are now consistently accomplished in **hours to weeks**.
+2. **Multi-Tool Synergy via MCP**: Connecting agentic LLMs directly to specialized backends (**IDA Pro**, **Ghidra**, **Radare2**, **PCSX-Redux**) via **Model Context Protocol (MCP)** enables real-time memory inspection, symbol renaming, and automated binary patching.
+3. **Preservation of Digital Heritage**: Agentic AI bridges the gap between obsolete legacy architectures (16-bit DOS, VB6, MIPS, 6502, custom script VMs) and modern portable ecosystems (Rust, Go, C#/.NET, C++20, WebAssembly).

@@ -7,8 +7,6 @@
 
 A curated open-source research repository, methodology guide, and knowledge base dedicated to **AI-assisted Video Game Reverse Engineering**, decompilation workflows, binary file format reconstruction, memory forensics, and classic game engine preservation.
 
-Maintained by **IGI Proz / Heaven-HM** ([igiproz.hm@gmail.com](mailto:igiproz.hm@gmail.com)).
-
 ---
 
 ## 📖 Overview
@@ -31,13 +29,13 @@ A showcase of documented reverse-engineering and engine rebuild projects powered
 | Project | Genre | Tools Used | Methodology & Highlights | Result | Time Taken |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | [**OpenIGI**](https://github.com/OpenIGI/OpenIGI) (2000) | Tactical Stealth FPS | Claude Code + Codex + IDA Pro + Ghidra + Radare2 MCP | Decompiled stripped x86 engine, QVM script VM, MEF meshes, terrain LOD & AI perception via MCP agents. | Complete open-source engine reimplementation (.NET / OpenGL / Vulkan). | **1 month** |
-| **Legends of Future Past** (1992) | Multiplayer Online MUD / RPG | Claude Code | Reverse-engineered proprietary scripts, GM manuals & 1996 recordings without source code. | Full Go engine + React + WebSocket + MongoDB rebuild (2,273 rooms, 1,990 items). | **One weekend** |
+| [**Legends of Future Past**](https://github.com/jonradoff/lofp) (1992) | Multiplayer Online MUD / RPG | Claude Code | Reverse-engineered proprietary scripts, GM manuals & 1996 recordings without source code. | Full Go engine + React + WebSocket + MongoDB rebuild (2,273 rooms, 1,990 items). | **One weekend** |
 | **SkyRoads** (1993 DOS) | Futuristic 3D Racer / Flyer | Codex | Analyzed raw binary EXE only, disassembled code, built custom software renderer in Rust. | Working native Rust port running on modern OS. | **~6 hours** |
 | **Disney Infinity 1.0** (2013) | Commercial Toys-to-Life | Claude Code (Opus) | Traced call graphs in symbol-stripped binary, found 13 character validation checks, generated binary patches. | Universal character unlock mod (unsolved for a decade). | **< 24 hours** |
 | **Chromatron** (~2005) | Laser / Mirror Logic Puzzle | Claude Code + Cursor + Ghidra | Decompiled legacy WinXP / PowerPC binaries via GhidrAssistMCP to modern targets. | Native Apple Silicon + WebAssembly (Wasm) ports. | **Iterative** |
-| **Weltendämmerung** (1980s C64) | Turn-based Strategy | Claude Code (Opus 4.5) | Spec-driven reverse engineering from 6502 machine code to modern web stack. | 1:1 accurate web browser port. | **3 days** |
+| [**Weltendämmerung**](https://github.com/adolfintel/weltendaemmerung) (1980s) | Turn-based Strategy | Claude Code (Opus 4.5) | Spec-driven reverse engineering from 6502 machine code to modern web stack. | 1:1 accurate web browser port. | **3 days** |
 | **Tomba!** (PS1) | 2.5D Action Platformer | Claude Code + Ghidra + PCSX-Redux | Created a MIPS-to-C++ static recompiler through an iterative agentic feedback loop. | Native Windows port with cutscenes, audio, combat & menus. | **~3 weeks** |
-| **Era Online** (1999) | MMORPG (Visual Basic 6) | Claude Code | Autonomous exploration of client binary and protocol; built extraction tools and modern server. | Full resurrection of the classic 1999 MMORPG. | **Short** |
+| [**Era Online**](https://era-online-forever.com) (1999) | MMORPG (Visual Basic 6) | Claude Code | Autonomous exploration of client binary and protocol; built extraction tools and modern server. | Full resurrection of the classic 1999 MMORPG. | **Short** |
 
 *For complete in-depth case studies on each project, read [09. Documented AI Reverse-Engineering & Rebuild Projects](docs/09_documented_ai_reverse_engineering_projects.md).*
 
@@ -78,6 +76,15 @@ The knowledge base is organized into focused Markdown guides:
 - **MCP Servers & AI**: Ghidra MCP Server, IDA Pro MCP, Radare2 MCP (`r2pipe`), Antigravity, Claude Code, OpenAI Codex.
 - **File Format Analysis**: 010 Editor, ImHex, Kaitai Struct, Hex Fiend.
 - **Modern Dev**: C++20, C#, Rust, Go, Python 3.12, Qt5/Qt6, OpenGL, Vulkan, CMake.
+
+---
+
+## 🚀 Getting Started
+
+Browse any of the Markdown guides in the [`docs/`](docs/) directory to explore specific topics, or check out our companion projects:
+- [OpenIGI](https://github.com/OpenIGI/OpenIGI) - Full open-source engine reimplementation of Project I.G.I.
+- [project-igi-converter](https://github.com/heaven-hm/project-igi-converter) - Script compiler, decompiler, and multi-format asset conversion engine.
+- [project-igi-editor](https://github.com/heaven-hm/project-igi-editor) - 3D level viewport and modding suite.
 
 ---
 
