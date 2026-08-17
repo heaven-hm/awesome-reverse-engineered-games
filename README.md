@@ -12,6 +12,17 @@ Reverse engineering legacy video games combines binary analysis (disassembly, de
 
 ## Games
 
+| Project | Genre | Tools Used | Methodology & Highlights | Result | Time Taken |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| [OpenIGI](https://github.com/OpenIGI/OpenIGI) (2000) | Tactical Stealth FPS | Claude Code + Codex + IDA Pro + Ghidra + Radare2 MCP | Decompiled stripped x86 engine, QVM script VM, MEF meshes, terrain LOD & AI perception via MCP agents. | Complete open-source engine reimplementation (.NET / OpenGL / Vulkan). | 1 month |
+| [Legends of Future Past](https://github.com/jonradoff/lofp) (1992) | Multiplayer Online MUD / RPG | Claude Code | Reverse-engineered proprietary scripts, GM manuals & 1996 recordings without source code. | Full Go engine + React + WebSocket + MongoDB rebuild (2,273 rooms, 1,990 items). | One weekend |
+| [SkyRoads](https://classicreload.com/skyroads.html) (1993 DOS) | Futuristic 3D Racer / Flyer | Codex | Analyzed raw binary EXE only, disassembled code, built custom software renderer in Rust. | Working native Rust port running on modern OS. | ~6 hours |
+| [Disney Infinity 1.0](https://mindstream.news/disney-infinity-ai-mod) (2013) | Commercial Toys-to-Life | Claude Code (Opus) | Traced call graphs in symbol-stripped binary, found 13 character validation checks, generated binary patches. | Universal character unlock mod (unsolved for a decade). | < 24 hours |
+| [Chromatron](https://news.ycombinator.com/item?id=43048999) (~2005) | Laser / Mirror Logic Puzzle | Claude Code + Cursor + Ghidra | Decompiled legacy WinXP / PowerPC binaries via GhidrAssistMCP to modern targets. | Native Apple Silicon + WebAssembly ports. | Iterative |
+| [Weltendämmerung](https://github.com/adolfintel/weltendaemmerung) (1980s C64) | Turn-based Strategy | Claude Code (Opus 4.5) | Spec-driven reverse engineering from 6502 machine code to modern web stack. | 1:1 accurate web browser port. | 3 days |
+| [Tomba!](https://1379.tech) (PS1) | 2.5D Action Platformer | Claude Code + Ghidra + PCSX-Redux | Created a MIPS-to-C++ static recompiler through an iterative agentic feedback loop. | Native Windows port with cutscenes, audio, combat & menus. | ~3 weeks |
+| [Era Online](https://era-online-forever.com) (1999) | MMORPG (Visual Basic 6) | Claude Code | Autonomous exploration of client binary and protocol; built extraction tools and modern server. | Full resurrection of the classic 1999 MMORPG. | Short |
+
 - [OpenIGI](https://github.com/OpenIGI/OpenIGI) - Full open-source tactical stealth shooter engine reimplementation of Project I.G.I. in C# and OpenGL.
 - [Legends of Future Past](https://github.com/jonradoff/lofp) - Resurrection of the 1992 CompuServe online multiplayer RPG rebuilt in Go, React, and MongoDB.
 - [SkyRoads](https://classicreload.com/skyroads.html) - Native Rust port and software rasterizer reverse-engineered from the 1993 MS-DOS space racer binary.
