@@ -1,12 +1,24 @@
 # Awesome Reverse-Engineered Games 🎮
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](LICENSE)
 [![GitHub heaven-hm](https://img.shields.io/badge/GitHub-heaven--hm-blue?logo=github)](https://github.com/heaven-hm)
 [![Author IGI Proz](https://img.shields.io/badge/Author-IGI%20Proz-green)](mailto:igiproz.hm@gmail.com)
 [![Status Documentation](https://img.shields.io/badge/Docs-Markdown%20Knowledge%20Base-orange)](docs/)
 
 A curated list and comprehensive guide of **awesome reverse-engineered, decompiled, and rebuilt games** powered by AI models and agentic tools (Claude Code, OpenAI Codex, IDA Pro, Ghidra, Radare2 MCPs, and custom emulators).
+
+---
+
+## Contents
+
+- [Overview](#-overview)
+- [Documented Reverse-Engineered Games](#-documented-reverse-engineered-games)
+  - [Summary Matrix](#summary-matrix)
+  - [Game Profiles](#️-game-profiles--ai-rebuild-summaries-100-words-each)
+- [Documentation](#-documentation)
+- [Tooling & Tech Stack](#️-tooling--tech-stack)
+- [Companion Projects](#-companion-projects)
 
 ---
 
@@ -104,9 +116,3 @@ For complete research guides, reverse-engineering methodologies, MCP tool setups
 - [**OpenIGI**](https://github.com/OpenIGI/OpenIGI) — Full open-source engine reimplementation of Project I.G.I.
 - [**project-igi-converter**](https://github.com/heaven-hm/project-igi-converter) — Script compiler, decompiler, and multi-format asset conversion engine.
 - [**project-igi-editor**](https://github.com/heaven-hm/project-igi-editor) — 3D level viewport and modding suite.
-
----
-
-## 📄 License
-
-Distributed under the [MIT License](LICENSE). See `LICENSE` for details.
