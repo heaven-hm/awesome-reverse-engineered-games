@@ -1,7 +1,7 @@
 # AGENTS.md
 
 ## Repository Overview
-`awesome-reverse-engineering-games-ai` is a curated knowledge base, research repository, and guide system for AI-assisted video game reverse engineering, decompilation, memory analysis, binary format reconstruction, and engine preservation.
+`awesome-reverse-engineered-games` is a curated knowledge base, research repository, and guide system for reverse engineered games, decompilations, engine reconstructions, and AI-assisted binary analysis.
 
 ## Maintainer
 - **Organization / Author**: IGI Proz / Heaven-HM

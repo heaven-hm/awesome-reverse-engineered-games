@@ -1,4 +1,4 @@
-# Awesome AI Game Reverse Engineering 🎮🧠
+# Awesome Reverse-Engineered Games 🎮🧠
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -6,7 +6,7 @@
 [![Author IGI Proz](https://img.shields.io/badge/Author-IGI%20Proz-green)](mailto:igiproz.hm@gmail.com)
 [![Status Documentation](https://img.shields.io/badge/Docs-Markdown%20Knowledge%20Base-orange)](docs/)
 
-A curated list and comprehensive guide of **awesome reverse-engineering, decompilation, and engine rebuild projects** powered by AI models and agentic tools (Claude Code, OpenAI Codex, IDA Pro, Ghidra, Radare2 MCPs, and custom emulators).
+A curated list and comprehensive guide of **awesome reverse-engineered, decompiled, and rebuilt games** powered by AI models and agentic tools (Claude Code, OpenAI Codex, IDA Pro, Ghidra, Radare2 MCPs, and custom emulators).
 
 ---
 
@@ -23,7 +23,7 @@ Modern game reverse engineering combines classical binary analysis (static disas
 
 ---
 
-## 🏆 Documented AI Reverse-Engineering Projects
+## 🏆 Documented Reverse-Engineered Games
 
 ### Summary Matrix
 
