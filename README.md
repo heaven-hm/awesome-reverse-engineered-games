@@ -35,17 +35,17 @@ Reverse engineering legacy video games combines binary analysis (disassembly, de
 
 ## Documentation
 
-- [AI Reverse Engineering Guide](docs/01_introduction.md) - Introduction to reverse engineering workflows assisted by large language models.
-- [Static Analysis and Decompilation](docs/02_static_analysis_and_decompilation.md) - Workflows for decompilation, symbol recovery, and type restoration.
-- [Dynamic Analysis and Memory](docs/03_dynamic_analysis_and_memory.md) - Techniques for runtime memory scanning, pointer tracing, and function hooking.
-- [File Format Reconstruction](docs/04_file_format_reconstruction.md) - Methodology for decoding proprietary 3D meshes, textures, and archive containers.
-- [Bytecode and Scripting Engines](docs/05_bytecode_and_scripting_engines.md) - Analysis of custom virtual machines, opcode dispatchers, and bytecode compilation.
-- [Ghidra and AI Workflows](docs/06_ai_prompts_and_ghidra_workflows.md) - Automation scripts and reusable prompt templates for binary analysis.
-- [Game Engine Preservation](docs/07_game_engine_preservation.md) - Architectural patterns for building modern source ports and level editors.
-- [Project I.G.I. Case Study](docs/08_case_studies_project_igi.md) - Technical deep-dive into legacy game engine reversing and asset conversion.
-- [Documented Rebuild Projects](docs/09_documented_ai_reverse_engineering_projects.md) - Comprehensive catalog of game rebuild and decompilation case studies.
-- [MCP Architecture](docs/10_mcp_reverse_engineering_architecture.md) - Overview of Model Context Protocol integration with binary analysis environments.
-- [Ghidra MCP Server](docs/11_ghidra_mcp_setup_and_workflows.md) - Setup guide for connecting language models directly to the Ghidra decompiler.
-- [IDA Pro MCP Server](docs/12_ida_pro_mcp_setup_and_workflows.md) - IDAPython server configuration for Hex-Rays decompiler tool calling.
-- [Radare2 MCP Workflows](docs/13_radare2_r2pipe_mcp_workflows.md) - Headless binary analysis, control flow extraction, and emulation via r2pipe.
-- [Universal Decompilation Prompts](docs/14_universal_ai_decompilation_prompts.md) - Reusable prompt templates for 3D mathematics, physics, and entity loops.
+- [AI Reverse Engineering Guide](https://github.com/heaven-hm/awesome-reverse-engineered-games/blob/main/docs/01_introduction.md) - Introduction to reverse engineering workflows assisted by large language models.
+- [Static Analysis and Decompilation](https://github.com/heaven-hm/awesome-reverse-engineered-games/blob/main/docs/02_static_analysis_and_decompilation.md) - Workflows for decompilation, symbol recovery, and type restoration.
+- [Dynamic Analysis and Memory](https://github.com/heaven-hm/awesome-reverse-engineered-games/blob/main/docs/03_dynamic_analysis_and_memory.md) - Techniques for runtime memory scanning, pointer tracing, and function hooking.
+- [File Format Reconstruction](https://github.com/heaven-hm/awesome-reverse-engineered-games/blob/main/docs/04_file_format_reconstruction.md) - Methodology for decoding proprietary 3D meshes, textures, and archive containers.
+- [Bytecode and Scripting Engines](https://github.com/heaven-hm/awesome-reverse-engineered-games/blob/main/docs/05_bytecode_and_scripting_engines.md) - Analysis of custom virtual machines, opcode dispatchers, and bytecode compilation.
+- [Ghidra and AI Workflows](https://github.com/heaven-hm/awesome-reverse-engineered-games/blob/main/docs/06_ai_prompts_and_ghidra_workflows.md) - Automation scripts and reusable prompt templates for binary analysis.
+- [Game Engine Preservation](https://github.com/heaven-hm/awesome-reverse-engineered-games/blob/main/docs/07_game_engine_preservation.md) - Architectural patterns for building modern source ports and level editors.
+- [Project I.G.I. Case Study](https://github.com/heaven-hm/awesome-reverse-engineered-games/blob/main/docs/08_case_studies_project_igi.md) - Technical deep-dive into legacy game engine reversing and asset conversion.
+- [Documented Rebuild Projects](https://github.com/heaven-hm/awesome-reverse-engineered-games/blob/main/docs/09_documented_ai_reverse_engineering_projects.md) - Comprehensive catalog of game rebuild and decompilation case studies.
+- [MCP Architecture](https://github.com/heaven-hm/awesome-reverse-engineered-games/blob/main/docs/10_mcp_reverse_engineering_architecture.md) - Overview of Model Context Protocol integration with binary analysis environments.
+- [Ghidra MCP Server](https://github.com/heaven-hm/awesome-reverse-engineered-games/blob/main/docs/11_ghidra_mcp_setup_and_workflows.md) - Setup guide for connecting language models directly to the Ghidra decompiler.
+- [IDA Pro MCP Server](https://github.com/heaven-hm/awesome-reverse-engineered-games/blob/main/docs/12_ida_pro_mcp_setup_and_workflows.md) - IDAPython server configuration for Hex-Rays decompiler tool calling.
+- [Radare2 MCP Workflows](https://github.com/heaven-hm/awesome-reverse-engineered-games/blob/main/docs/13_radare2_r2pipe_mcp_workflows.md) - Headless binary analysis, control flow extraction, and emulation via r2pipe.
+- [Universal Decompilation Prompts](https://github.com/heaven-hm/awesome-reverse-engineered-games/blob/main/docs/14_universal_ai_decompilation_prompts.md) - Reusable prompt templates for 3D mathematics, physics, and entity loops.
