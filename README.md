@@ -81,15 +81,6 @@ The knowledge base is organized into focused Markdown guides:
 
 ---
 
-## 📬 Contact & Community
-
-- **Maintainer**: IGI Proz / Heaven-HM
-- **Email**: [igiproz.hm@gmail.com](mailto:igiproz.hm@gmail.com)
-- **GitHub**: [@heaven-hm](https://github.com/heaven-hm)
-- **YouTube**: [IGI Research Devs](https://www.youtube.com/@heaven-hm91)
-
----
-
 ## 📄 License
 
 Distributed under the [MIT License](LICENSE). See `LICENSE` for details.
