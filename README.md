@@ -15,11 +15,12 @@ Maintained by **IGI Proz / Heaven-HM** ([igiproz.hm@gmail.com](mailto:igiproz.hm
 
 Modern game reverse engineering combines classical binary analysis (static disassembly, dynamic debugging, memory hooking) with modern AI agentic workflows and Large Language Models (LLMs). This repository serves as a centralized collection of documentation and research notes covering:
 
-1. **AI-Augmented Decompilation**: Prompt engineering, context injection, and structural recovery from raw Ghidra/IDA C pseudocode.
-2. **Binary File Format Reconstruction**: Using heuristics and AI pattern matching to decode proprietary 3D models, textures, animations, archives, and level scripts.
-3. **Dynamic Memory & State Forensics**: Hooking game loops, locating entities, tracking vtables, and mapping gameplay states.
-4. **Bytecode & Virtual Machine Reversing**: Disassembling and interpreting proprietary game scripting engines (e.g. QVM/QSC in Project I.G.I.).
-5. **Game Engine Modernization**: Re-implementing legacy rendering, audio, and physics pipelines in modern C++ / C# / Vulkan / OpenGL.
+1. **AI-Augmented Decompilation**: Prompt engineering, context injection, and structural recovery from raw Ghidra/IDA/Radare2 pseudocode.
+2. **MCP (Model Context Protocol) Integration**: Connecting AI agents directly to **Ghidra**, **IDA Pro**, and **Radare2** for real-time querying, symbol renaming, and type propagation.
+3. **Binary File Format Reconstruction**: Using heuristics and AI pattern matching to decode proprietary 3D models, textures, animations, archives, and level scripts.
+4. **Dynamic Memory & State Forensics**: Hooking game loops, locating entities, tracking vtables, and mapping gameplay states.
+5. **Bytecode & Virtual Machine Reversing**: Disassembling and interpreting proprietary game scripting engines.
+6. **Game Engine Modernization**: Re-implementing legacy rendering, audio, and physics pipelines in modern C++ / C# / Vulkan / OpenGL.
 
 ---
 
@@ -46,6 +47,7 @@ A showcase of documented reverse-engineering and engine rebuild projects powered
 
 The knowledge base is organized into focused Markdown guides:
 
+### Core Reverse Engineering Methodologies
 | Document | Description |
 | :--- | :--- |
 | [**01. Introduction to AI Reverse Engineering**](docs/01_introduction.md) | Fundamentals of game reverse engineering with LLMs and agentic assistants. |
@@ -58,24 +60,24 @@ The knowledge base is organized into focused Markdown guides:
 | [**08. Case Studies: Project I.G.I.**](docs/08_case_studies_project_igi.md) | Real-world deep-dives into Project I.G.I. engine internals, QVM scripting, and converters. |
 | [**09. AI Rebuild Projects Showcase**](docs/09_documented_ai_reverse_engineering_projects.md) | Catalog of famous real-world game rebuilds created with Claude Code, Codex, IDA Pro & Ghidra. |
 
+### Model Context Protocol (MCP) & Universal Reversing
+| Document | Description |
+| :--- | :--- |
+| [**10. MCP in Reverse Engineering**](docs/10_mcp_reverse_engineering_architecture.md) | Architecture overview of connecting AI agents directly to disassemblers and debuggers. |
+| [**11. Ghidra MCP Setup & Workflows**](docs/11_ghidra_mcp_setup_and_workflows.md) | Full setup, tool definitions, headless bridging, and agentic workflows with Ghidra. |
+| [**12. IDA Pro MCP Setup & Workflows**](docs/12_ida_pro_mcp_setup_and_workflows.md) | IDAPython MCP server setup, Hex-Rays decompiler API, microcode analysis, and struct sync. |
+| [**13. Radare2 & r2pipe MCP Workflows**](docs/13_radare2_r2pipe_mcp_workflows.md) | Headless r2pipe MCP server, CFG extraction, ESIL emulation, and binary diffing. |
+| [**14. Universal AI Decompilation Prompts**](docs/14_universal_ai_decompilation_prompts.md) | Battle-tested prompt templates for 3D math, collision, ECS entity loops, and file parsers. |
+
 ---
 
 ## 🛠️ Tooling & Tech Stack
 
 - **Disassemblers & Decompilers**: Ghidra, IDA Pro, Binary Ninja, Radare2 / Cutter.
 - **Dynamic Debuggers**: x64dbg, Cheat Engine, ScyllaHide, Process Hacker, PCSX-Redux.
-- **AI & Automation**: Antigravity, Claude Code, OpenAI Codex, OpenAI API, Ghidra MCP Server, Radare2 MCP, Python scripts (`pefile`, `capstone`, `keystone`).
+- **MCP Servers & AI**: Ghidra MCP Server, IDA Pro MCP, Radare2 MCP (`r2pipe`), Antigravity, Claude Code, OpenAI Codex.
 - **File Format Analysis**: 010 Editor, ImHex, Kaitai Struct, Hex Fiend.
 - **Modern Dev**: C++20, C#, Rust, Go, Python 3.12, Qt5/Qt6, OpenGL, Vulkan, CMake.
-
----
-
-## 🚀 Getting Started
-
-Browse any of the Markdown guides in the [`docs/`](docs/) directory to explore specific topics, or check out our companion projects:
-- [OpenIGI](https://github.com/OpenIGI/OpenIGI) - Full open-source engine reimplementation of Project I.G.I.
-- [project-igi-converter](https://github.com/heaven-hm/project-igi-converter) - Script compiler, decompiler, and multi-format asset conversion engine.
-- [project-igi-editor](https://github.com/heaven-hm/project-igi-editor) - 3D level viewport and modding suite.
 
 ---
 
