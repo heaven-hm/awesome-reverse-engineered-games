@@ -45,7 +45,7 @@ Modern game reverse engineering combines classical binary analysis (static disas
 #### 1. [OpenIGI (Project I.G.I. - 2000)](https://github.com/OpenIGI/OpenIGI)
 * **What the Game Is**: A milestone tactical stealth first-person shooter powered by Innerloop Studios' proprietary JSF flight and 3D simulation engine.
 * **AI & RE Achievement**: Multi-agent AI (Claude Code & Codex) connected to IDA Pro, Ghidra, and Radare2 MCP servers decompiled stripped x86 binaries in one month. The agents reconstructed the QVM bytecode virtual machine, MEF 3D meshes, continuous terrain LOD renderer, and soldier AI perception raycasting into a full open-source C#/.NET engine reimplementation.
-* **Links**: [OpenIGI Repo](https://github.com/OpenIGI/OpenIGI) · [3D Editor](https://github.com/heaven-hm/project-igi-editor) · [QVM Converter](https://github.com/heaven-hm/project-igi-converter) · [Video](https://www.youtube.com/@heaven-hm91)
+* **Links**: [OpenIGI Repo](https://github.com/OpenIGI/OpenIGI) · [3D Editor](https://github.com/heaven-hm/project-igi-editor) · [QVM Converter](https://github.com/heaven-hm/project-igi-converter) · [Video Showcase](https://www.youtube.com/watch?v=UaLWHrA1Vhk)
 
 #### 2. [Legends of Future Past (1992)](https://github.com/jonradoff/lofp)
 * **What the Game Is**: A pioneering 1990s commercial Multi-User Dungeon (MUD) text-based multiplayer RPG originally hosted on CompuServe.

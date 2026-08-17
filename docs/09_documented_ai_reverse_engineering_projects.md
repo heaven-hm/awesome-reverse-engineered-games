@@ -32,7 +32,7 @@ A curated catalog of real-world, documented reverse-engineering, decompilation, 
   - 🔗 **GitHub Repository**: [OpenIGI/OpenIGI](https://github.com/OpenIGI/OpenIGI)
   - 🔗 **Editor Suite**: [project-igi-editor](https://github.com/heaven-hm/project-igi-editor)
   - 🔗 **Converter & QVM Compiler**: [project-igi-converter](https://github.com/heaven-hm/project-igi-converter)
-  - 🎥 **Video & Demonstrations**: [IGI Research Devs YouTube](https://www.youtube.com/@heaven-hm91)
+  - 🎥 **Gameplay & Tech Demonstration Video**: [OpenIGI Showcase on YouTube](https://www.youtube.com/watch?v=UaLWHrA1Vhk) ([Channel](https://www.youtube.com/@heaven-hm91))
 
 > **🎯 What Was Achieved With Agentic AI & Reverse Engineering (~50 words):**
 > Multi-agent AI (Claude Code & Codex) connected to IDA Pro, Ghidra, and Radare2 MCP servers decompiled stripped x86 binaries in one month. The agents reconstructed the proprietary QVM bytecode virtual machine, MEF 3D mesh parser, continuous terrain LOD renderer, soldier AI perception raycasting, and delivered a complete open-source C#/.NET engine reimplementation.
