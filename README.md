@@ -1,4 +1,4 @@
-# Awesome Reverse-Engineered Games 🎮🧠
+# Awesome Reverse-Engineered Games 🎮
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -40,7 +40,7 @@ Modern game reverse engineering combines classical binary analysis (static disas
 
 ---
 
-### 🕹️ Game Profiles & AI Rebuild Summaries (<100 Words Each)
+### 🕹️ Game Profiles & AI Rebuild Summaries
 
 #### 1. [OpenIGI (Project I.G.I. - 2000)](https://github.com/OpenIGI/OpenIGI)
 * **What the Game Is**: A milestone tactical stealth first-person shooter powered by Innerloop Studios' proprietary JSF flight and 3D simulation engine.
@@ -97,7 +97,6 @@ For complete research guides, reverse-engineering methodologies, MCP tool setups
 - **MCP Servers & AI**: Ghidra MCP Server, IDA Pro MCP, Radare2 MCP (`r2pipe`), Antigravity, Claude Code, OpenAI Codex.
 - **File Format Analysis**: 010 Editor, ImHex, Kaitai Struct, Hex Fiend.
 - **Modern Dev**: C++20, C#, Rust, Go, Python 3.12, Qt5/Qt6, OpenGL, Vulkan, CMake.
-
 ---
 
 ## 🚀 Companion Projects
