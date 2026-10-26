@@ -35,10 +35,19 @@ I.G.I. levels are governed by script packages known as `QVM` (compiled bytecode)
 
 ---
 
-## 3. Tooling Ecosystem
+## 3. Reverse Engineering & Tooling Ecosystem
 
-The reverse engineering efforts have yielded a suite of open-source tools maintained by the community:
+The reverse engineering community for Project I.G.I. and I.G.I.-2 has produced active decompilations, recompilations, and modding tools:
 
+### Recompilation, Decompilation & Source Ports
+- **[IGI Recomp](https://github.com/HenryKun55/igi-recomp)** (by [@HenryKun55](https://github.com/HenryKun55)): Ahead-of-Time (AOT) static binary recompilation of retail `IGI.exe` to portable C running on macOS (Apple Silicon ARM64), PS Vita, and PC at 60+ FPS with modern OpenGL rendering and FFmpeg Indeo 5 video playback.
+- **[IGI-RE](https://github.com/slickdaddyy/IGI-RE)** (by [@slickdaddyy](https://github.com/slickdaddyy)): Function recovery, disassembled game logic analysis, and decompilation targeting the original Project I.G.I. binary.
+- **[Project Open IGI](https://github.com/heaven-hm/project-open-igi)** (by [@heaven-hm](https://github.com/heaven-hm)): Modern C++20 engine reconstruction and source port with strict CFG concordance gates, DirectDraw/Direct3D 7 rendering, and QVM virtual machine integration.
+- **[OpenIGI](https://github.com/OpenIGI/OpenIGI)** (by [@ShahriyarB](https://github.com/ShahriyarB)): Clean-room multi-game engine reimplementation in C# on .NET 10 supporting both *Project I.G.I.* and *I.G.I. 2: Covert Strike*.
+- **[IGI 2 Decomp](https://github.com/ShahriyarB/igi2-decomp)** (by [@ShahriyarB](https://github.com/ShahriyarB)): Reverse engineering and decompilation project targeting *I.G.I.-2: Covert Strike*.
+- **[project-igi-reverse-engineering](https://github.com/heaven-hm/project-igi-reverse-engineering)**: Curated index and central directory of all reverse-engineering and source-port efforts across the I.G.I. series.
+
+### Asset Converters & Editor Tools
 - **[project-igi-editor](https://github.com/heaven-hm/project-igi-editor)**: Modern 3D level navigation and modding editor.
 - **[project-igi-converter](https://github.com/heaven-hm/project-igi-converter)**: C++ Qt multi-format asset conversion engine and QSC/QVM compiler/decompiler.
 - **[project-igi-qvm-editor](https://github.com/heaven-hm/project-igi-qvm-editor)**: Legacy script manipulation toolkit.

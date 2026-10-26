@@ -38,7 +38,11 @@ Modern game reverse engineering combines classical binary analysis (static disas
 
 | Project | Genre | Tools Used | Methodology & Highlights | Result | Time Taken |
 | :--- | :--- | :--- | :--- | :--- | :--- |
+| [IGI Recomp](https://github.com/HenryKun55/igi-recomp) (2000) | Tactical Stealth FPS | Custom AOT Recompiler + Unicorn + Capstone + FFmpeg | Ahead-of-Time (AOT) static binary recompilation of retail `IGI.exe` to portable C. Direct3D 7 translated to modern OpenGL; Indeo 5 AVI cutscenes via FFmpeg. | 100% playable native ports on macOS (Apple Silicon ARM64), PS Vita, and PC at uncapped 60+ FPS. | Completed |
+| [IGI-RE](https://github.com/slickdaddyy/IGI-RE) (2000) | Tactical Stealth FPS | Ghidra + IDA Pro | Reverse engineering and decompilation targeting the original Project I.G.I. binary. | Function recovery, disassembled game logic analysis, and file format documentation. | In progress |
+| [Project Open IGI](https://github.com/heaven-hm/project-open-igi) (2000) | Tactical Stealth FPS | C++20 + Binary Ninja + radare2 + angr + Frida | Clean-room C++20 engine reconstruction mapped to retail virtual addresses with rigorous CFG concordance gates. | Native C++20 reconstruction running 3D models, DirectX 7 terrain rendering, and QVM bytecode. | In progress |
 | [OpenIGI](https://openigi.com) (2000) | Tactical Stealth FPS | Claude Code + Codex + IDA Pro + Ghidra + Radare2 MCP | Decompiled stripped x86 engine, QVM script VM, MEF meshes, terrain LOD & AI perception via MCP agents. | Complete open-source engine reimplementation (.NET / OpenGL / Vulkan). | 1 month |
+| [IGI 2 Decomp](https://github.com/ShahriyarB/igi2-decomp) (2003) | Tactical Stealth FPS | IDA Pro + Ghidra | Disassembly analysis, structure recovery, and engine subsystems decompilation targeting the I.G.I.-2: Covert Strike executable. | Recovered game structures, weapon handlers, and mission subsystem documentation. | In progress |
 | [Legends of Future Past](https://github.com/jonradoff/lofp) (1992) | Multiplayer Online MUD / RPG | Claude Code | Reverse-engineered proprietary scripts, GM manuals & 1996 recordings without source code. | Full Go engine + React + WebSocket + MongoDB rebuild (2,273 rooms, 1,990 items). | One weekend |
 | [SkyRoads](https://classicreload.com/skyroads.html) (1993 DOS) | Futuristic 3D Racer / Flyer | Codex | Analyzed raw binary EXE only, disassembled code, built custom software renderer in Rust. | Working native Rust port running on modern OS. | ~6 hours |
 | [Disney Infinity 1.0](https://mindstream.news/disney-infinity-ai-mod) (2013) | Commercial Toys-to-Life | Claude Code (Opus) | Traced call graphs in symbol-stripped binary, found 13 character validation checks, generated binary patches. | Universal character unlock mod (unsolved for a decade). | < 24 hours |
@@ -51,42 +55,72 @@ Modern game reverse engineering combines classical binary analysis (static disas
 
 ## Game Profiles and AI Achievements
 
-### 1. 🎮 [OpenIGI (Project I.G.I. - 2000)](https://github.com/OpenIGI/OpenIGI)
+### 1. 🎮 Project I.G.I.: I'm Going In (IGI 1 - 2000)
 * **What the Game Is**: A milestone tactical stealth first-person shooter powered by Innerloop Studios' proprietary JSF flight and 3D simulation engine.
-* **AI & RE Achievement**: Multi-agent AI (Claude Code & Codex) connected to IDA Pro, Ghidra, and Radare2 MCP servers decompiled stripped x86 binaries in one month. The agents reconstructed the QVM bytecode virtual machine, MEF 3D meshes, continuous terrain LOD renderer, and soldier AI perception raycasting into a full open-source C#/.NET engine reimplementation.
-* **Links**: [OpenIGI Repo](https://github.com/OpenIGI/OpenIGI) · [3D Editor](https://github.com/heaven-hm/project-igi-editor) · [QVM Converter](https://github.com/heaven-hm/project-igi-converter) · [Video Showcase](https://www.youtube.com/watch?v=UaLWHrA1Vhk)
+* **Key Reverse Engineering & Recompilation Projects**:
+  * **[IGI Recomp (Static Recompilation)](https://github.com/HenryKun55/igi-recomp)**
+    * **Repository:** [https://github.com/HenryKun55/igi-recomp](https://github.com/HenryKun55/igi-recomp)
+    * **Author:** [@HenryKun55](https://github.com/HenryKun55)
+    * **Approach:** Ahead-of-Time (AOT) static binary recompilation of retail `IGI.exe` to portable C.
+    * **Platforms:** macOS (native Apple Silicon ARM64), PlayStation Vita, and PC.
+    * **Features:** Full 100% playable game logic, 60+ FPS uncapped framerates, widescreen support, Direct3D 7 to modern OpenGL translation, and native Indeo 5 AVI cutscene playback via FFmpeg.
+  * **[IGI-RE (Decompilation)](https://github.com/slickdaddyy/IGI-RE)**
+    * **Repository:** [https://github.com/slickdaddyy/IGI-RE](https://github.com/slickdaddyy/IGI-RE)
+    * **Author:** [@slickdaddyy](https://github.com/slickdaddyy)
+    * **Approach:** Reverse engineering and decompilation project targeting the original Project I.G.I. executable.
+    * **Features:** Function recovery, file format documentation, and disassembled game logic analysis.
+  * **[Project Open IGI (C++20 Reconstruction)](https://github.com/heaven-hm/project-open-igi)**
+    * **Repository:** [https://github.com/heaven-hm/project-open-igi](https://github.com/heaven-hm/project-open-igi)
+    * **Author:** [@heaven-hm](https://github.com/heaven-hm)
+    * **Approach:** Modern C++20 engine reconstruction and source port.
+    * **Features:** Clean-room architecture, modern toolchain integration, cross-platform gameplay reproduction, and developer diagnostics.
+  * **[OpenIGI (Clean-Room Engine Reimplementation)](https://github.com/OpenIGI/OpenIGI)**
+    * **Repository:** [https://github.com/OpenIGI/OpenIGI](https://github.com/OpenIGI/OpenIGI)
+    * **Author:** [@ShahriyarB](https://github.com/ShahriyarB)
+    * **Approach:** Multi-agent AI (Claude Code & Codex) connected to IDA Pro, Ghidra, and Radare2 MCP servers decompiled stripped x86 binaries in one month. The agents reconstructed the QVM bytecode virtual machine, MEF 3D meshes, continuous terrain LOD renderer, and soldier AI perception raycasting into a full open-source C#/.NET engine reimplementation.
+* **Links**: [IGI Recomp](https://github.com/HenryKun55/igi-recomp) · [IGI-RE](https://github.com/slickdaddyy/IGI-RE) · [Project Open IGI](https://github.com/heaven-hm/project-open-igi) · [OpenIGI](https://github.com/OpenIGI/OpenIGI) · [3D Editor](https://github.com/heaven-hm/project-igi-editor) · [QVM Converter](https://github.com/heaven-hm/project-igi-converter) · [Video Showcase](https://www.youtube.com/watch?v=UaLWHrA1Vhk)
 
-### 2. 🧙‍♂️ [Legends of Future Past (1992)](https://github.com/jonradoff/lofp)
+### 2. 🎯 I.G.I.-2: Covert Strike (IGI 2 - 2003)
+* **What the Game Is**: The direct sequel to Project I.G.I., featuring enhanced tactical stealth mechanics, squad AI, thermal vision, and expanded missions across Eastern Europe and China.
+* **Key Reverse Engineering Project**:
+  * **[IGI 2 Decomp (Decompilation)](https://github.com/ShahriyarB/igi2-decomp)**
+    * **Repository:** [https://github.com/ShahriyarB/igi2-decomp](https://github.com/ShahriyarB/igi2-decomp)
+    * **Author:** [@ShahriyarB](https://github.com/ShahriyarB)
+    * **Approach:** Reverse engineering and decompilation project targeting the *I.G.I.-2: Covert Strike* executable.
+    * **Features:** Disassembly analysis, structure recovery, and engine subsystems documentation.
+* **Links**: [IGI 2 Decomp Repo](https://github.com/ShahriyarB/igi2-decomp) · [OpenIGI Multi-Game Engine](https://github.com/OpenIGI/OpenIGI)
+
+### 3. 🧙‍♂️ [Legends of Future Past (1992)](https://github.com/jonradoff/lofp)
 * **What the Game Is**: A pioneering 1990s commercial Multi-User Dungeon (MUD) text-based multiplayer RPG originally hosted on CompuServe.
 * **AI & RE Achievement**: With original server source code lost, creator Jon Radoff fed 1990s GM script files and gameplay logs to Claude Code. In one weekend, the AI deduced the proprietary language grammar, combat formulas, and monster AI, rebuilding the full engine in Go, React, and MongoDB across 2,273 rooms.
 * **Links**: [GitHub Repository](https://github.com/jonradoff/lofp) · [Play Online](https://lofp.metavert.io) · [Postmortem Article](https://metavert.io)
 
-### 3. 🚀 [SkyRoads (1993 DOS)](https://classicreload.com/skyroads.html)
+### 4. 🚀 [SkyRoads (1993 DOS)](https://classicreload.com/skyroads.html)
 * **What the Game Is**: A fast-paced 3D space obstacle racing game released for MS-DOS by BlueMoon Software.
 * **AI & RE Achievement**: Given only the raw 16-bit DOS executable `SKYROADS.EXE`, OpenAI Codex autonomously extracted assets, disassembled x86 instructions, reverse-engineered flight and gravity physics, and synthesized a custom software rasterizer in native Rust running on modern 64-bit operating systems in ~6 hours.
 * **Links**: [ClassicReload Player](https://classicreload.com/skyroads.html) · [Gameplay Video](https://www.youtube.com/results?search_query=SkyRoads+1993+DOS+gameplay)
 
-### 4. 🦸‍♂️ [Disney Infinity 1.0 (2013)](https://mindstream.news/disney-infinity-ai-mod)
+### 5. 🦸‍♂️ [Disney Infinity 1.0 (2013)](https://mindstream.news/disney-infinity-ai-mod)
 * **What the Game Is**: A commercial toys-to-life action-adventure game with physical figurines locked to specific in-game playsets.
 * **AI & RE Achievement**: Claude Code analyzed the symbol-stripped commercial binary without documentation. The AI traced call graphs for `FindPlaysetForCharacter`, identified all 13 validation check sites locking characters to playsets, and generated precise binary byte patches in under 24 hours, solving a decade-old modding challenge.
 * **Links**: [Modding Research](https://mindstream.news/disney-infinity-ai-mod) · [Mod Demonstration](https://www.youtube.com/results?search_query=Disney+Infinity+All+Characters+Mod)
 
-### 5. 🔮 [Chromatron (~2005–2006)](https://news.ycombinator.com/item?id=43048999)
+### 6. 🔮 [Chromatron (~2005–2006)](https://news.ycombinator.com/item?id=43048999)
 * **What the Game Is**: An optical puzzle game by Silver Sphere Software involving laser beams, mirrors, filters, and prisms.
 * **AI & RE Achievement**: Developers paired Ghidra with Claude Code via `GhidrAssistMCP` to decompile legacy Windows XP and PowerPC Mac binaries. The AI refactored legacy assembly into clean modern C++, producing fully playable native ports for Apple Silicon macOS and in-browser WebAssembly.
 * **Links**: [Technical Article](https://news.ycombinator.com/item?id=43048999) · [Gameplay Walkthrough](https://www.youtube.com/results?search_query=Chromatron+laser+puzzle+game)
 
-### 6. ⚔️ [Weltendämmerung (1980s C64)](https://github.com/adolfintel/weltendaemmerung)
+### 7. ⚔️ [Weltendämmerung (1980s C64)](https://github.com/adolfintel/weltendaemmerung)
 * **What the Game Is**: A classic turn-based fantasy grand strategy game developed for the Commodore 64 home computer.
 * **AI & RE Achievement**: Using a spec-driven reverse engineering approach, Claude Code (Opus 4.5) disassembled 6502 machine code, converted hardware-level VIC-II graphics and memory-mapped states into abstract specifications, and generated a complete 1:1 modern web browser port in just 3 days.
 * **Links**: [GitHub & Web Port](https://github.com/adolfintel/weltendaemmerung) · [C64 Gameplay Video](https://www.youtube.com/results?search_query=Weltendaemmerung+C64)
 
-### 7. 🐷 [Tomba! (1997 PS1)](https://1379.tech)
+### 8. 🐷 [Tomba! (1997 PS1)](https://1379.tech)
 * **What the Game Is**: A beloved 2.5D side-scrolling platformer/adventure game developed by Whoopee Camp for the Sony PlayStation 1.
 * **AI & RE Achievement**: Developer Matthew Stanley used Claude Code with Ghidra and a PCSX-Redux MCP server to build a MIPS-to-C++ static recompiler in 3 weeks. The resulting native Windows port boots retail game assets, renders FMV cutscenes, and runs gameplay with authentic physics and audio.
 * **Links**: [Technical Writeup](https://1379.tech) · [PCSX-Redux](https://github.com/grumpycoders/pcsx-redux) · [PS1 Longplay](https://www.youtube.com/results?search_query=Tomba+PS1+gameplay+longplay)
 
-### 8. 🛡️ [Era Online (1999)](https://era-online-forever.com)
+### 9. 🛡️ [Era Online (1999)](https://era-online-forever.com)
 * **What the Game Is**: A vintage 2D isometric multiplayer online role-playing game (MMORPG) originally built in Visual Basic 6.
 * **AI & RE Achievement**: Claude Code autonomously analyzed legacy VB6 binaries and undocumented network packet streams, built extraction tools for sprites and tile maps, and refactored the entire client-server codebase into modern C# and Blazor WebAssembly running seamlessly in modern web browsers.
 * **Links**: [Era Online Portal](https://era-online-forever.com) · [Modernization Overview](https://claude.com) · [Gameplay Video](https://www.youtube.com/results?search_query=Era+Online+1999+MMORPG)
